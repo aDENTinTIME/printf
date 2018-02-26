@@ -29,6 +29,9 @@ int print_string(va_list s)
 int print_special_string(va_list s)
 {
 	int count = 0;
+	char *string = va_arg(s, char *);
+
+	string = "";
 
 	return (count);
 }
@@ -83,6 +86,23 @@ int print_rot13(va_list r)
 int print_reverse(va_list r)
 {
 	int count = 0;
+	int length = 0;
+	char *string = va_arg(r, char *);
+
+	while (*(string + length) != '\0')
+	{
+		length++;
+		count++;
+	}
+
+	length--;
+	count--;
+
+	while (length >= 0)
+	{
+		_putchar(*(string + length));
+		length--;
+	}
 
 	return (count);
 }
@@ -97,6 +117,9 @@ int print_reverse(va_list r)
 int print_pointer(va_list p)
 {
 	int count = 0;
+	char *string = va_arg(p, char *);
+
+	string = "";
 
 	return (count);
 }
