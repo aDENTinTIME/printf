@@ -1,7 +1,10 @@
 #include "holberton.h"
 
 /**
+ * _printf - Prints a formatted string, similar to printf.
+ * @format: Arguments passed to program.
  *
+ * Return: Returns length of string.
  */
 
 int _printf(const char *format, ...)
@@ -36,7 +39,7 @@ int _printf(const char *format, ...)
 			f_i++;
 			for (s_i = 0; spec[s_i].sym != NULL; s_i++)
 			{
-				if (format[f_i] == *spec[s_i}.sym)
+				if (format[f_i] == *spec[s_i].sym)
 				{
 					count += spect[s_i].f(args);
 				}
