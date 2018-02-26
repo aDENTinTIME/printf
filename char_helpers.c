@@ -2,15 +2,15 @@
 
 /**
  * print_char - prints argument of type char
- * @c: argument to print
+ * @args: argument to print
  *
  * Return: number of characters printed
  * in this case, return value will always be 1
  */
 
-int print_char(va_list c)
+int print_char(va_list args)
 {
-	char print_this = va_arg(c, int);
+	char print_this = va_arg(args, int);
 
 	_putchar(print_this);
 
@@ -20,14 +20,16 @@ int print_char(va_list c)
 
 /**
  * print_percent - prints percent sign
- * @p: percent sign
+ * @args: percent sign
  *
  * Return: number of character printed
  * in this case, return value will always be 1
  */
-int print_percent(va_list p)
+
+int print_percent(va_list args)
 {
-	char percent = va_arg(p, int);
+	char percent = va_arg(args, int);
+
 	percent = '%';
 
 	_putchar(percent);
