@@ -9,7 +9,7 @@
 
 int _printf(const char *format, ...)
 {
-	int f_i, s_i;
+	int f_i;
 	va_list args;
 	int count = 0;
 	int (*func)(va_list);
