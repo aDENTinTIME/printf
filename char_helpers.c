@@ -27,6 +27,8 @@ int print_char(va_list c)
  */
 int print_percent(va_list p)
 {
+	p = 0;
+
 	_putchar('%');
 
 	return (1);
