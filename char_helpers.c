@@ -8,7 +8,7 @@
  * in this case, return value will always be 1
  */
 
-int print_char(va_list c);
+int print_char(va_list c)
 {
 	_putchar(va_args(c, int));
 
