@@ -36,5 +36,5 @@ int (*get_spec_func(char spec))(va_list)
 			return (type[i].f);
 	}
 
-	return (0);
+	return (count);
 }
