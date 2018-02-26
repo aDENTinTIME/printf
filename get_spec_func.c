@@ -30,11 +30,11 @@ int (*get_spec_func(char spec))(va_list)
 		{NULL, NULL}
 	};
 
-	for (i = 0; type[i] != NULL; i++)
+	for (i = 0; type[i].sym != NULL; i++)
 	{
 		if (spec == *type[i].sym)
 			return(type[i].f);
 	}
 
-	return (O);
+	return (0);
 }
