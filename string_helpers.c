@@ -33,7 +33,7 @@ int print_special_string(va_list args)
 
 	string = "";
 
-	s = 0;
+	_putchar(string[0]);
 
 	return (count);
 }
@@ -106,8 +106,6 @@ int print_reverse(va_list args)
 		length--;
 	}
 
-	r = 0;
-
 	return (count);
 }
 
@@ -125,7 +123,7 @@ int print_pointer(va_list args)
 
 	string = "";
 
-	p = 0;
+	_putchar(string[0]);
 
 	return (count);
 }
