@@ -22,19 +22,19 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 int(*get_spec_func(char spec))(va_list);
 
-int print_char(va_list c);
-int print_percent(va_list p);
-int print_integer(va_list i);
-int print_decimal(va_list d);
-int print_string(va_list s);
-int print_special_string(va_list s);
-int print_rot13(va_list r);
-int print_reverse(va_list r);
-int print_pointer(va_list p);
-int print_binary(va_list b);
-int print_unsigned(va_list u);
-int print_octal(va_list o);
-int print_lil_hex(va_list x);
-int print_big_hex(va_list x);
+int print_char(va_list args);
+int print_percent(va_list args);
+int print_integer(va_list args);
+int print_decimal(va_list args);
+int print_string(va_list args);
+int print_special_string(va_list args);
+int print_rot13(va_list args);
+int print_reverse(va_list args);
+int print_pointer(va_list args);
+int print_binary(va_list args);
+int print_unsigned(va_list args);
+int print_octal(va_list args);
+int print_lil_hex(va_list args);
+int print_big_hex(va_list args);
 
 #endif

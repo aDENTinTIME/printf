@@ -3,36 +3,38 @@
 /**
  * print_binary - prints argument of type int in
  * binary (base 2).
- * @b: argument to print.
+ * @args: argument to print.
  *
  * Return: number of characters printed.
  */
 
-int print_binary(va_list b)
+int print_binary(va_list args)
 {
 	int count = 0;
+	int num = va_arg(args, int);
 
-	b = 0;
+	num = 0;
 
-	_putchar(b + '0');
+	_putchar(num + '0');
 
 	return (count);
 }
 
 /**
  * print_unsigned - prints argument of type unsigned int.
- * @u: argument to print.
+ * @args: argument to print.
  *
  * Return: number of characters printed.
  */
 
-int print_unsigned(va_list u)
+int print_unsigned(va_list args)
 {
 	int count = 0;
+	unsigned int num = va_arg(args, unsigned int);
 
-	u = 0;
+	num = 0;
 
-	_putchar(u + '0');
+	_putchar(num + '0');
 
 	return (count);
 }
@@ -40,18 +42,19 @@ int print_unsigned(va_list u)
 /**
  * print_octal - prints argument of type int in
  * octal (base 8).
- * @o: argument to print.
+ * @args: argument to print.
  *
  * Return: number of characters printed.
  */
 
-int print_octal(va_list o)
+int print_octal(va_list args)
 {
 	int count = 0;
+	int num = va_arg(args, int);
 
-	o = 0;
+	num = 0;
 
-	_putchar(o + '0');
+	_putchar(num + '0');
 
 	return (count);
 }
@@ -59,18 +62,19 @@ int print_octal(va_list o)
 /**
  * print_lil_hex - prints argument of type unsigned int in
  * hex (base 16) using lowercase.
- * @x: argument to print.
+ * @args: argument to print.
  *
  * Return: number of characters printed.
  */
 
-int print_lil_hex(va_list x)
+int print_lil_hex(va_list args)
 {
 	int count = 0;
+	unsigned int num = va_arg(args, unsigned int);
 
-	x = 0;
+	num = 0;
 
-	_putchar(x + '0');
+	_putchar(num + '0');
 
 	return (count);
 }
@@ -78,18 +82,19 @@ int print_lil_hex(va_list x)
 /**
  * print_big_hex - prints argument of type unsigned int in
  * hex (base 16) using UPPERCASE.
- * @x: argument to print.
+ * @args: argument to print.
  *
  * Return: number of characters printed.
  */
 
-int print_big_hex(va_list x)
+int print_big_hex(va_list args)
 {
 	int count = 0;
+	unsigned int num = va_arg(args, unsigned int);
 
-	x = 0;
+	num = 0;
 
-	_putchar(x + '0');
+	_putchar(num + '0');
 
 	return (count);
 }
