@@ -12,6 +12,7 @@ int _printf(const char *format, ...)
 	int f_i, s_i;
 	va_list args;
 	int count = 0;
+	int (*func)(va_list);
 
 	spec_t spec [] =
 	{
@@ -30,7 +31,7 @@ int _printf(const char *format, ...)
 		if (format[f_i] == '%')
 		{
 			f_i++;
-			func = find_spec(format[f_i]);
+			func = get_spec_func(format[f_i]);
 			count += func(args);
 			f_i++;
 		}
