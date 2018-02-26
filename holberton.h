@@ -18,9 +18,9 @@ typedef struct format
 	int (*f)(va_list);
 } spec_t;
 
-
+int _printf(const char *format, ...);
 int _putchar(char c);
-int(*get_spec_func(char))(va_list);
+int(*get_spec_func(char spec))(va_list);
 
 int print_char(va_list c);
 int print_percent(va_list p);
