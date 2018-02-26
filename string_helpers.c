@@ -2,7 +2,7 @@
 
 /**
  * print_string - prints argument of type char *
- * @s -  argument to print
+ * @s: -  argument to print
  *
  * Return: number of characters printed
  */
@@ -43,6 +43,32 @@ int print_special_string(va_list s)
 int print_rot13(va_list r)
 {
 	int count = 0;
+	int i;
+	char *src = va_arg(r, char *);
+
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		if      (src[i] >= 110 && src[i] <= 122)
+		{
+			_putchar(src[i] - 13);
+			count++;
+		}
+		else if (src[i] >= 97 && src[i] <= 109)
+		{
+			_putchar(src[i] + 13);
+			count++;
+		}
+		else if (src[i] >= 78 && src[i] <= 90)
+		{
+			_putchar(src[i] - 13);
+			count++;
+		}
+		else if (src[i] >= 65 && src[i] <= 77)
+		{
+			_putchar(src[i] + 13);
+			count++;
+		}
+	}
 
 	return (count);
 }

@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	int (*func)(va_list);
 	char *current;
 
-	va_start (args, format);
+	va_start(args, format);
 
 	for (f_i = 0; format != NULL && format[f_i] != '\0'; f_i++)
 	{
