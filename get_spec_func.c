@@ -10,7 +10,6 @@
 int (*get_spec_func(char spec))(va_list)
 {
 	int i;
-	int count = 0;
 
 	spec_t type[] = {
 		{"c", print_char},
@@ -36,5 +35,5 @@ int (*get_spec_func(char spec))(va_list)
 			return (type[i].f);
 	}
 
-	return (count);
+	return (0);
 }
