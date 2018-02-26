@@ -65,7 +65,7 @@ int print_rot13(va_list args)
 {
 	int count = 0;
 	int i;
-	char *src = va_arg(args, char *);
+	char *string = va_arg(args, char *);
 	char *null = "(null)";
 
 	if (string == NULL)
@@ -75,26 +75,26 @@ int print_rot13(va_list args)
 		return (count);
 	}
 
-	for (i = 0; src != NULL && src[i] != '\0'; i++)
+	for (i = 0; string != NULL && string[i] != '\0'; i++)
 	{
-		if      (src[i] >= 110 && src[i] <= 122)
+		if      (string[i] >= 110 && string[i] <= 122)
 		{
-			_putchar(src[i] - 13);
+			_putchar(string[i] - 13);
 			count++;
 		}
-		else if (src[i] >= 97 && src[i] <= 109)
+		else if (string[i] >= 97 && string[i] <= 109)
 		{
-			_putchar(src[i] + 13);
+			_putchar(string[i] + 13);
 			count++;
 		}
-		else if (src[i] >= 78 && src[i] <= 90)
+		else if (string[i] >= 78 && string[i] <= 90)
 		{
-			_putchar(src[i] - 13);
+			_putchar(string[i] - 13);
 			count++;
 		}
-		else if (src[i] >= 65 && src[i] <= 77)
+		else if (string[i] >= 65 && string[i] <= 77)
 		{
-			_putchar(src[i] + 13);
+			_putchar(string[i] + 13);
 			count++;
 		}
 	}
