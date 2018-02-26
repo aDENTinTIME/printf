@@ -20,10 +20,11 @@ typedef struct format
 
 
 int _putchar(char c);
+int(*get_spec_func(char))(va_list);
 
 int print_char(va_list c);
 int print_percent(va_list p);
-int print_int(va_list i);
+int print_integer(va_list i);
 int print_decimal(va_list d);
 int print_string(va_list s);
 int print_special_string(va_list s);
