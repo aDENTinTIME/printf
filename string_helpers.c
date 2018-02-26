@@ -30,6 +30,8 @@ int print_special_string(va_list s)
 {
 	int count = 0;
 
+	s = 0;
+
 	return (count);
 }
 
@@ -84,6 +86,8 @@ int print_reverse(va_list r)
 {
 	int count = 0;
 
+	r = 0;
+
 	return (count);
 }
 
@@ -97,6 +101,8 @@ int print_reverse(va_list r)
 int print_pointer(va_list p)
 {
 	int count = 0;
+
+	p = 0;
 
 	return (count);
 }
