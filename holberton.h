@@ -15,14 +15,14 @@ typedef struct format
 {
 	char *sym;
 	void (*f)(va_list);
-} format_t;
+} spec_t;
 
 
 int _putchar(char c);
 
 void print_char(va_list c);
 void print_int(va_list i);
-void print_float(va_list f);
+void print_decimal(va_list d);
 void print_string(va_list s);
 
 #endif
