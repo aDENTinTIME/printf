@@ -11,8 +11,16 @@ int print_string(va_list args)
 {
 	int count = 0;
 	char *string = va_arg(args, char *);
+	char *null = "(null)";
 
-	for (count = 0; string[count] != '\0'; count++)
+	if (string == NULL)
+	{
+		for (; count < 6; count++)
+			_putchar(null[count]);
+		return (count);
+	}
+
+	for (; string[count] != '\0'; count++)
 		_putchar(string[count]);
 
 	return (count);
@@ -30,6 +38,14 @@ int print_special_string(va_list args)
 {
 	int count = 0;
 	char *string = va_arg(args, char *);
+	char *null = "(null)";
+
+	if (string == NULL)
+	{
+		for (; count < 6; count++)
+			_putchar(null[count]);
+		return (count);
+	}
 
 	string = "";
 
@@ -50,8 +66,16 @@ int print_rot13(va_list args)
 	int count = 0;
 	int i;
 	char *src = va_arg(args, char *);
+	char *null = "(null)";
 
-	for (i = 0; src[i] != '\0'; i++)
+	if (string == NULL)
+	{
+		for (; count < 6; count++)
+			_putchar(null[count]);
+		return (count);
+	}
+
+	for (i = 0; src != NULL && src[i] != '\0'; i++)
 	{
 		if      (src[i] >= 110 && src[i] <= 122)
 		{
@@ -90,6 +114,14 @@ int print_reverse(va_list args)
 	int count = 0;
 	int length = 0;
 	char *string = va_arg(args, char *);
+	char *null = "(null)";
+
+	if (string == NULL)
+	{
+		for (; count < 6; count++)
+			_putchar(null[count]);
+		return (count);
+	}
 
 	while (*(string + length) != '\0')
 	{
@@ -120,6 +152,14 @@ int print_pointer(va_list args)
 {
 	int count = 0;
 	char *string = va_arg(args, char *);
+	char *null = "(null)";
+
+	if (string == NULL)
+	{
+		for (; count < 6; count++)
+			_putchar(null[count]);
+		return (count);
+	}
 
 	string = "";
 
