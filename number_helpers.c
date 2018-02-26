@@ -9,7 +9,7 @@
 
 int print_decimal(va_list d)
 {
-
+	int count = 0;
 	return (count);
 }
 
@@ -22,6 +22,6 @@ int print_decimal(va_list d)
 
 int print_integer(va_list i)
 {
-
+	int count = 0;
 	return (count);
 }
