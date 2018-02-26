@@ -11,6 +11,7 @@
 int print_binary(va_list b)
 {
 	int count = 0;
+
 	return (count);
 }
 
@@ -24,6 +25,7 @@ int print_binary(va_list b)
 int print_unsigned(va_list u)
 {
 	int count = 0;
+
 	return (count);
 }
 
@@ -38,6 +40,7 @@ int print_unsigned(va_list u)
 int print_octal(va_list o)
 {
 	int count = 0;
+
 	return (count);
 }
 
@@ -52,11 +55,12 @@ int print_octal(va_list o)
 int print_lil_hex(va_list x)
 {
 	int count = 0;
+
 	return (count);
 }
 
 /**
- * print_lil_hex - prints argument of type unsigned int in
+ * print_big_hex - prints argument of type unsigned int in
  * hex (base 16) using UPPERCASE.
  * @x: argument to print.
  *
@@ -66,5 +70,6 @@ int print_lil_hex(va_list x)
 int print_big_hex(va_list x)
 {
 	int count = 0;
+
 	return (count);
 }
