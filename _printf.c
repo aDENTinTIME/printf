@@ -13,16 +13,7 @@ int _printf(const char *format, ...)
 	va_list args;
 	int count = 0;
 	int (*func)(va_list);
-
-	spec_t spec [] =
-	{
-		{"c", print_char},
-		{"i", print_int},
-		{"d", print_decimal},
-		{"s", print_string},
-		{"%", print_percent},
-		{NULL, NULL}
-	};
+	char *current;
 
 	va_start (args, format);
 
@@ -33,7 +24,6 @@ int _printf(const char *format, ...)
 			f_i++;
 			func = get_spec_func(format[f_i]);
 			count += func(args);
-			f_i++;
 		}
 		else
 		{
