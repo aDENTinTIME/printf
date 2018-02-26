@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 	va_list args;
 	int count = 0;
 
-	spec_t spec
+	spec_t spec [] =
 	{
 		{"c", print_char},
 		{"i", print_int},
@@ -27,23 +27,17 @@ int _printf(const char *format, ...)
 
 	for (f_i = 0; format != NULL && format[f_i] != '\0'; f_i++)
 	{
-		if (format[f_i] != '%')
+		if (format[f_i] == '%')
 		{
-			_putchar(format[f_i]);
 			f_i++;
-			count++;
+			func = find_spec(format[f_i]);
+			count += func(args);
+			f_i++;
 		}
-
 		else
 		{
-			f_i++;
-			for (s_i = 0; spec[s_i].sym != NULL; s_i++)
-			{
-				if (format[f_i] == *spec[s_i].sym)
-				{
-					count += spect[s_i].f(args);
-				}
-			}
+			_putchar(format[f_i]);
+			count++;
 		}
 	}
 
