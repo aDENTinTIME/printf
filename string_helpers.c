@@ -2,15 +2,15 @@
 
 /**
  * print_string - prints argument of type char *
- * @s: -  argument to print
+ * @args: -  argument to print
  *
  * Return: number of characters printed
  */
 
-int print_string(va_list s)
+int print_string(va_list args)
 {
 	int count = 0;
-	char *string = va_arg(s, char *);
+	char *string = va_arg(args, char *);
 
 	for (count = 0; string[count] != '\0'; count++)
 		_putchar(string[count]);
@@ -21,15 +21,15 @@ int print_string(va_list s)
 /**
  * print_special_string - prints argument of type char *
  * replacing non-printable characters with ASCII value in hex
- * @s: argument to print
+ * @args: argument to print
  *
  * Return: number of characters printed
  */
 
-int print_special_string(va_list s)
+int print_special_string(va_list args)
 {
 	int count = 0;
-	char *string = va_arg(s, char *);
+	char *string = va_arg(args, char *);
 
 	string = "";
 
@@ -40,16 +40,16 @@ int print_special_string(va_list s)
 
 /**
  * print_rot13 - prints argument of type char * after ROT13 encryption
- * @r: argument to print
+ * @args: argument to print
  *
  * Return: number of characters printed
  */
 
-int print_rot13(va_list r)
+int print_rot13(va_list args)
 {
 	int count = 0;
 	int i;
-	char *src = va_arg(r, char *);
+	char *src = va_arg(args, char *);
 
 	for (i = 0; src[i] != '\0'; i++)
 	{
@@ -80,16 +80,16 @@ int print_rot13(va_list r)
 
 /**
  * print_reverse - prints reversed argument of type char *
- * @r: argument to print
+ * @args: argument to print
  *
  * Return: number of characters printed
  */
 
-int print_reverse(va_list r)
+int print_reverse(va_list args)
 {
 	int count = 0;
 	int length = 0;
-	char *string = va_arg(r, char *);
+	char *string = va_arg(args, char *);
 
 	while (*(string + length) != '\0')
 	{
@@ -113,15 +113,15 @@ int print_reverse(va_list r)
 
 /**
  * print_pointer - prints pointer address
- * @p: address to print
+ * @args: address to print
  *
  * Return: number of characters printed
  */
 
-int print_pointer(va_list p)
+int print_pointer(va_list args)
 {
 	int count = 0;
-	char *string = va_arg(p, char *);
+	char *string = va_arg(args, char *);
 
 	string = "";
 
