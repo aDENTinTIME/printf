@@ -2,19 +2,19 @@
 
 /**
  * print_decimal - prints argument of type decimal.
- * @d: argument to print.
+ * @args: argument to print.
  *
  * Return: number of characters printed.
  */
 
-int print_decimal(va_list d)
+int print_decimal(va_list args)
 {
 	int count = 0;
 	int digit, sum, last;
 	int divis = 1000000000;
 	int num;
 
-	num = va_arg(d, int);
+	num = va_arg(args, int);
 	sum = 0;
 
 	if (num < 0)
@@ -45,19 +45,19 @@ int print_decimal(va_list d)
 
 /**
  * print_integer - prints argument of type integer.
- * @i: argument to print.
+ * @args: argument to print.
  *
  * Return: number of characters printed.
  */
 
-int print_integer(va_list i)
+int print_integer(va_list args)
 {
 	int count = 0;
 	int digit, sum, last;
 	int divis = 1000000000;
 	int num;
 
-	num = va_arg(i, int);
+	num = va_arg(args, int);
 	sum = 0;
 
 	if (num < 0)
