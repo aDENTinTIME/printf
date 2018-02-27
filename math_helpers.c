@@ -49,7 +49,7 @@ int lil_hex_helper(unsigned int n)
 			_putchar(n + '0');
 
 		else
-			_putchar((n % 10) + '0' + '1');
+			_putchar((n % 10) + 97);
 
 		return (1);
 	}
@@ -72,7 +72,7 @@ int big_hex_helper(unsigned int n)
 			_putchar(n + '0');
 
 		else
-			_putchar((n % 10) + '0' + '1');
+			_putchar((n % 10) + 65);
 
 		return (1);
 	}
