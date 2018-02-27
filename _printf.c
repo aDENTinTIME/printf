@@ -15,7 +15,6 @@ int _printf(const char *format, ...)
 	int (*func)(va_list);
 
 	va_start(args, format);
-
 	for (f_i = 0; format != NULL && format[f_i] != '\0'; f_i++)
 	{
 		if (format[f_i] == '%')
@@ -27,6 +26,8 @@ int _printf(const char *format, ...)
 				count++;
 				return (count);
 			}
+			while (format[f_i] == ' ')
+				f_i++;
 			func = get_spec_func(format[f_i]);
 			if (func == NULL)
 			{
@@ -45,8 +46,6 @@ int _printf(const char *format, ...)
 			count++;
 		}
 	}
-
 	va_end(args);
-
 	return (count);
 }
