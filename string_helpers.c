@@ -70,31 +70,28 @@ int print_rot13(va_list args)
 		return (6);
 	}
 
-	for (i = 0; string != NULL && string[i] != '\0'; i++)
+	for (i = 0; string[i] != '\0'; i++)
 	{
 		if      (string[i] >= 110 && string[i] <= 122)
 		{
 			_putchar(string[i] - 13);
-			count++;
 		}
 		else if (string[i] >= 97 && string[i] <= 109)
 		{
 			_putchar(string[i] + 13);
-			count++;
 		}
 		else if (string[i] >= 78 && string[i] <= 90)
 		{
 			_putchar(string[i] - 13);
-			count++;
 		}
 		else if (string[i] >= 65 && string[i] <= 77)
 		{
 			_putchar(string[i] + 13);
-			count++;
 		}
+		count++;
 	}
 
-	return (count);
+	return (count - 1);
 }
 
 /**
