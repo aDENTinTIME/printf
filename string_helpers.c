@@ -147,7 +147,7 @@ int print_pointer(va_list args)
 
 	if (string == NULL)
 	{
-		write(1, "(null)", 6)
+		write(1, "(null)", 6);
 		return (6);
 	}
 
