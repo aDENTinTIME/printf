@@ -21,8 +21,23 @@ int _printf(const char *format, ...)
 		if (format[f_i] == '%')
 		{
 			f_i++;
+			if (format[f_i] == '\0')
+			{
+				_putchar('%');
+				count++;
+				return (count);
+			}
 			func = get_spec_func(format[f_i]);
-			count += func(args);
+			if (func == NULL)
+			{
+				_putchar('%');
+				_putchar(format[f_i]);
+				count += 2;
+			}
+			else
+			{
+				count += func(args);
+			}
 		}
 		else
 		{

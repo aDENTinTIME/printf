@@ -26,11 +26,9 @@ int print_char(va_list args)
  * in this case, return value will always be 1
  */
 
-int print_percent(va_list args)
+int print_percent(va_list __attribute__((unused)) args)
 {
-	char percent = va_arg(args, int);
-
-	percent = '%';
+	char percent = '%';
 
 	_putchar(percent);
 
