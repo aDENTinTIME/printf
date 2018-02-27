@@ -60,17 +60,9 @@ int print_unsigned(va_list args)
 
 int print_octal(va_list args)
 {
-	int num = va_arg(args, int);
-	int neg_count = 0;
+	unsigned int num = va_arg(args, unsigned int);
 
-	if (num < 0)
-	{
-		num *= -1;
-		_putchar('-');
-		neg_count = 1;
-	}
-
-	return (neg_count + octal_helper(num));
+	return (octal_helper(num));
 }
 
 /**
