@@ -14,10 +14,10 @@ int print_decimal(va_list args)
 	int divis = 1000000000;
 	int num;
 
-	num = va_arg(args, int);
+	if (args == NULL)
+		return (0);
 
-	if (num == NULL)
-		return (-1);
+	num = va_arg(args, int);
 
 	sum = 0;
 
@@ -61,10 +61,10 @@ int print_integer(va_list args)
 	int divis = 1000000000;
 	int num;
 
-	num = va_arg(args, int);
-
-	if (num == NULL)
+	if (args == NULL)
 		return (-1);
+
+	num = va_arg(args, int);
 
 	sum = 0;
 
