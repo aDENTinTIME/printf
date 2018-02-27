@@ -26,10 +26,26 @@ int print_unsigned(va_list args)
 {
 	int count = 0;
 	unsigned int num = va_arg(args, unsigned int);
+	int digit, sum, last;
+	int divis = 1000000000;
 
-	num = 0;
+	sum = 0;
 
-	_putchar(num + '0');
+	while (divis > 1)
+	{
+		digit = (num / divis) % 10;
+		sum += digit;
+		if (sum != 0)
+		{
+			_putchar(digit + '0');
+			count++;
+		}
+		divis = divis / 10;
+	}
+
+	last = num % 10;
+	_putchar(last + '0');
+	count++;
 
 	return (count);
 }
