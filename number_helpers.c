@@ -15,6 +15,10 @@ int print_decimal(va_list args)
 	int num;
 
 	num = va_arg(args, int);
+
+	if (num == NULL)
+		return (-1);
+
 	sum = 0;
 
 	if (num < 0)
@@ -58,6 +62,10 @@ int print_integer(va_list args)
 	int num;
 
 	num = va_arg(args, int);
+
+	if (num == NULL)
+		return (-1);
+
 	sum = 0;
 
 	if (num < 0)
