@@ -9,13 +9,16 @@
 
 int _printf(const char *format, ...)
 {
-	int f_i;
+	int f_i, count = 0;
 	va_list args;
-	int count = 0;
 	int (*func)(va_list);
 
+	if (format == NULL)
+		return (-1);
 	va_start(args, format);
-	for (f_i = 0; format != NULL && format[f_i] != '\0'; f_i++)
+	if (args == NULL)
+		return (-1);
+	for (f_i = 0; format[f_i] != '\0'; f_i++)
 	{
 		if (format[f_i] == '%')
 		{
@@ -36,9 +39,7 @@ int _printf(const char *format, ...)
 				count += 2;
 			}
 			else
-			{
 				count += func(args);
-			}
 		}
 		else
 		{
