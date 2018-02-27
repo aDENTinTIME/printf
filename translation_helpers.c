@@ -10,14 +10,9 @@
 
 int print_binary(va_list args)
 {
-	int count = 0;
-	int num = va_arg(args, int);
+	unsigned int num = va_arg(args, unsigned int);
 
-	num = 0;
-
-	_putchar(num + '0');
-
-	return (count);
+	return (binary_helper(num));
 }
 
 /**
@@ -49,14 +44,17 @@ int print_unsigned(va_list args)
 
 int print_octal(va_list args)
 {
-	int count = 0;
 	int num = va_arg(args, int);
+	int neg_count = 0;
 
-	num = 0;
+	if (num < 0)
+	{
+		num *= -1;
+		_putchar('-');
+		neg_count = 1;
+	}
 
-	_putchar(num + '0');
-
-	return (count);
+	return (neg_count + octal_helper(num));
 }
 
 /**

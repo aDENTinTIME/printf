@@ -36,5 +36,7 @@ int print_unsigned(va_list args);
 int print_octal(va_list args);
 int print_lil_hex(va_list args);
 int print_big_hex(va_list args);
+int binary_helper(unsigned int num);
+int octal_helper(int num);
 
 #endif
