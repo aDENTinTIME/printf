@@ -24,7 +24,7 @@ int binary_helper(unsigned int num)
  * Return: Number of characters printed.
  */
 
-int octal_helper(int num)
+int octal_helper(unsigned int num)
 {
 	if (num < 8)
 	{
