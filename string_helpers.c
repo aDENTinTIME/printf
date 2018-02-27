@@ -15,7 +15,7 @@ int print_string(va_list args)
 
 	if (string == NULL)
 	{
-		for (; count < 6; count++)
+		for (; null[count] != '\0'; count++)
 			_putchar(null[count]);
 		return (count);
 	}
