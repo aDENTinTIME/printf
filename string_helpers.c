@@ -99,7 +99,7 @@ int print_rot13(va_list args)
 		}
 	}
 
-	return (count);
+	return (count - 1);
 }
 
 /**
@@ -138,7 +138,7 @@ int print_reverse(va_list args)
 		length--;
 	}
 
-	return (count);
+	return (count - 1);
 }
 
 /**
