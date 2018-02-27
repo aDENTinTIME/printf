@@ -31,5 +31,5 @@ int octal_helper(int num)
 		_putchar(num + '0');
 		return (1);
 	}
-	return (1 + binary_helper(num / 8) + !_putchar(num % 8 + '0'));
+	return (1 + octal_helper(num / 8) + !_putchar(num % 8 + '0'));
 }
