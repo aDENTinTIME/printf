@@ -13,24 +13,25 @@ int print_decimal(va_list args)
 	int digit, sum, last;
 	int divis = 1000000000;
 	int num;
-
-	if (args == NULL)
-		return (0);
+	unsigned int x;
 
 	num = va_arg(args, int);
-
 	sum = 0;
-
 	if (num < 0)
 	{
 		_putchar('-');
 		num *= -1;
 		count++;
 	}
-
+	x = num;
+	if (x == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 	while (divis > 1)
 	{
-		digit = (num / divis) % 10;
+		digit = (x / divis) % 10;
 		sum += digit;
 		if (sum != 0)
 		{
@@ -40,7 +41,7 @@ int print_decimal(va_list args)
 		divis = divis / 10;
 	}
 
-	last = num % 10;
+	last = x % 10;
 	_putchar(last + '0');
 	count++;
 
@@ -60,24 +61,25 @@ int print_integer(va_list args)
 	int digit, sum, last;
 	int divis = 1000000000;
 	int num;
-
-	if (args == NULL)
-		return (-1);
+	unsigned int x;
 
 	num = va_arg(args, int);
-
 	sum = 0;
-
 	if (num < 0)
 	{
 		_putchar('-');
 		num *= -1;
 		count++;
 	}
-
+	x = num;
+	if (x == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 	while (divis > 1)
 	{
-		digit = (num / divis) % 10;
+		digit = (x / divis) % 10;
 		sum += digit;
 		if (sum != 0)
 		{
@@ -86,8 +88,7 @@ int print_integer(va_list args)
 		}
 		divis = divis / 10;
 	}
-
-	last = num % 10;
+	last = x % 10;
 	_putchar(last + '0');
 	count++;
 	return (count);
