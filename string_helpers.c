@@ -60,7 +60,6 @@ int print_special_string(va_list args)
 
 int print_rot13(va_list args)
 {
-	int count = 0;
 	int i;
 	char *string = va_arg(args, char *);
 
@@ -73,25 +72,18 @@ int print_rot13(va_list args)
 	for (i = 0; string[i] != '\0'; i++)
 	{
 		if      (string[i] >= 110 && string[i] <= 122)
-		{
 			_putchar(string[i] - 13);
-		}
 		else if (string[i] >= 97 && string[i] <= 109)
-		{
 			_putchar(string[i] + 13);
-		}
 		else if (string[i] >= 78 && string[i] <= 90)
-		{
 			_putchar(string[i] - 13);
-		}
 		else if (string[i] >= 65 && string[i] <= 77)
-		{
 			_putchar(string[i] + 13);
-		}
-		count++;
+		else
+			_putchar(string[i]);
 	}
 
-	return (count - 1);
+	return (i);
 }
 
 /**
