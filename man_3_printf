@@ -1,8 +1,8 @@
-.TH _PRINTF "27 Feb 2018" "0.32" "_printf man page"
+.TH _PRINTF "1" "v1" "_printf"
 .SH NAME
-.B _printf \- formatted output conversion
+_printf \- formatted output conversion
 .SH SYNOPSIS
-#include "holberton.h"
+.B #include\ "holberton.h"
 int _printf(const char *format, ...);
 holberton [STUDENTNAME]
 .SH DESCRIPTION
