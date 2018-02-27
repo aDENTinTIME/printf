@@ -75,14 +75,9 @@ int print_octal(va_list args)
 
 int print_lil_hex(va_list args)
 {
-	int count = 0;
 	unsigned int num = va_arg(args, unsigned int);
 
-	num = 0;
-
-	_putchar(num + '0');
-
-	return (count);
+	return (lil_hex_helper(num));
 }
 
 /**
@@ -95,12 +90,7 @@ int print_lil_hex(va_list args)
 
 int print_big_hex(va_list args)
 {
-	int count = 0;
 	unsigned int num = va_arg(args, unsigned int);
 
-	num = 0;
-
-	_putchar(num + '0');
-
-	return (count);
+	return (big_hex_helper(num));
 }
