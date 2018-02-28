@@ -79,3 +79,26 @@ int big_hex_helper(unsigned int n)
 	return(1 + big_hex_helper(n / 16) +
 	       !_putchar(n % 16 < 9 ? n % 16 + '0' : ((n % 16) % 10) + 65));
 }
+
+/**
+ * long_hex_helper - converts and prints base 10 in lowercase base 16
+ * @n: argument of type long
+ *
+ * Return: number of characters printed
+ */
+
+int long_hex_helper(long n)
+{
+        if (n < 16)
+        {
+                if (n < 9)
+                        _putchar(n + '0');
+
+                else
+                        _putchar((n % 10) + 97);
+
+                return (1);
+        }
+        return(1 + long_hex_helper(n / 16) +
+               !_putchar(n % 16 < 9 ? n % 16 + '0' : ((n % 16) % 10) + 97));
+}
