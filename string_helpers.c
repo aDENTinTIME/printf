@@ -159,6 +159,12 @@ int print_pointer(va_list args)
 		return (5);
 	}
 
+	if (address < 0)
+	{
+		write(1, "0xffffffffffffffff", 18);
+		return(18);
+	}
+
 	_putchar('0');
 	_putchar('x');
 
