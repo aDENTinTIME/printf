@@ -6,17 +6,21 @@ _printf \- formatted output conversion
 
 .B _printf \fIFORMAT\fR [\fIARGUMENT\fR]...
 .SH DESCRIPTION
-The _printf function produces output in a specific format, based on the given option.
+The _printf function produces output in a specific format, based on the given options, and writes to the standard output.
 .P
 .B Return value
+.br
 Number of characters printed.
 .P
 .B Format of the format string
+.br
 Unformatted unless specified by user.
 .P
 .B The conversion specifier
+.br
 A character that specifies what type of output to return.
-
+.P
+The following specifiers \fImust\fR be preceded by a percent '\fB%\fR' sign, otherwise they are treated like normal characters.
 
 .HP 2
 .BR c
@@ -58,10 +62,30 @@ The argument is of type char *. The full string is written in reverse.
 .br
 The argument is of type char *. The full string is converted into ROT13, each letter is rotated 13 positions, numbers are unaffected.
 
+.SH EXAMPLE
+Here is an example of how you could impliment the '%s' format specifier.
+.PP
+.IP
+int main(void)
+.br
+{
+.br
+	\fB_printf\fR("Print %s!", "this");
+.br
+	return (0);
+.br
+}
+.PP
+The preceding function would output "Print this!"
+
 .SH SEE ALSO
 .BR printf \fR(1)\f
 .SH BUGS
 No known bugs.
+.PP
+Please contact one of the authors in
+.br
+regard to any unanticipated behavior.
 .SH PROTOTYPE
 .B \fRint\fB _printf\fR(const char *format, ...)
 .SH AUTHORS
