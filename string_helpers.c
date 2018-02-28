@@ -153,6 +153,12 @@ int print_pointer(va_list args)
 {
 	long address = va_arg(args, long);
 
+	if (address == 0)
+	{
+		write(1, "(nil)", 5);
+		return (5);
+	}
+
 	_putchar('0');
 	_putchar('x');
 
