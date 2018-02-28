@@ -151,18 +151,10 @@ int print_reverse(va_list args)
 
 int print_pointer(va_list args)
 {
-	int count = 0;
-	char *string = va_arg(args, char *);
+	long address = va_arg(args, long);
 
-	if (string == NULL)
-	{
-		write(1, "(null)", 6);
-		return (6);
-	}
+	_putchar('0');
+	_putchar('x');
 
-	string = "";
-
-	_putchar(string[0]);
-
-	return (count);
+	return (long_hex_helper(address) + 2);
 }
