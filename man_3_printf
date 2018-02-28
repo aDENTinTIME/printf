@@ -1,44 +1,70 @@
-.TH _PRINTF "1" "v1" "_printf"
+.TH _PRINTF "1" "\(co February 27, 2018" "v1"
 .SH NAME
 _printf \- formatted output conversion
 .SH SYNOPSIS
 .B #include\ "holberton.h"
-.B _printf
-(const char *format, ...);
+
+.B _printf \fIFORMAT\fR [\fIARGUMENT\fR]...
 .SH DESCRIPTION
 The _printf function produces output in a specific format, based on the given option.
+.P
 .B Return value
-lkafjksf
+Number of characters printed.
+.P
 .B Format of the format string
-kdfj
+Unformatted unless specified by user.
+.P
 .B The conversion specifier
-A character that specifies what type of output to return
-.B d, i
-The int argument is converted to a signed decimal notation.
-.B c
+A character that specifies what type of output to return.
+
+
+.HP 2
+.BR c
+.br
 The int argument is converted into type char and a single character is written.
-.B s
-The argument is of type char *. The full string is written, up to a terminating null byte ('\0'). 
-.B f, F
-The double argument is rounded to the nearest place and converted to decimal notation such as xx.xx, where the number of digits after the decimal number is equal to to the precision specifier. The default precision specifier is 2. 
-.B o, u, x, X
-The unsigned int argument is converted to octal (o), unsigned decimal (u), lowercase hexadecimal (x), or uppercase hexadecimal (X) notation.
 
+.HP 2
+.BR s
+.br
+The argument is of type char *. The full string is written, up to a terminating null byte '\\0'. 
 
-/**
-.B The flag characters
-fkdj
-.B The field width
-klsfjd
-.B The precision
-lkfsja
-.B The length modifier
-fkdhs
-*/
+.HP 2
+.BR S
+.br
+The argument is of type char *. The full string is written, up to a terminating null byte '\\0', except for non printable characters, which instead are printed as their ascii value, in hex ie. '\\x0A', instead of '\\n'. 
+
+.HP 2
+.BR d ", " i
+.br
+The int argument is converted to a signed decimal notation.
+
+.HP 2
+.BR p
+.br
+The long int argument containing an address is printed.
+
+.HP 2
+.BR b ", " o ", " u ", " x ", " X
+.br
+The unsigned int argument is converted to binary (base 2) \fBb\fR, octal (base 8) \fBo\fR, unsigned decimal \fBu\fR, lowercase hexadecimal \fBx\fR, or UPPERCASE hexadecimal \fBX\fR notation.
+
+.HP 2
+.BR r
+.br
+The argument is of type char *. The full string is written in reverse. 
+
+.HP 2
+.BR R
+.br
+The argument is of type char *. The full string is converted into ROT13, each letter is rotated 13 positions, numbers are unaffected.
 
 .SH SEE ALSO
-.I printf(1)
+.BR printf \fR(1)\f
 .SH BUGS
 No known bugs.
-.SH AUTHOR
+.SH PROTOTYPE
+.B \fRint\fB _printf\fR(const char *format, ...)
+.SH AUTHORS
 Lizzie Turner, Arik Rosenthal
+.br
+@_lizzieturner_ @aDENTinTIME
