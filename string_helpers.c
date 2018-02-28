@@ -35,6 +35,7 @@ int print_string(va_list args)
 
 int print_special_string(va_list args)
 {
+	int index = 0;
 	int count = 0;
 	char *string = va_arg(args, char *);
 
@@ -44,9 +45,28 @@ int print_special_string(va_list args)
 		return (6);
 	}
 
-	string = "";
+	while (string[index] != '\0' && string[index] > 0)
+	{
+		if (string[index] >= 32 && string[index] < 127)
+		{
+			_putchar(string[index]);
+			count++;
+		}
 
-	_putchar(string[0]);
+		else
+		{
+			_putchar('\\');
+			_putchar('x');
+			count += 2;
+			if (string[index] < 16)
+			{
+				_putchar('0');
+				count++;
+			}
+			count += big_hex_helper(string[index]);
+		}
+		index++;
+	}
 
 	return (count);
 }
