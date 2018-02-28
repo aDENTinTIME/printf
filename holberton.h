@@ -40,5 +40,6 @@ int binary_helper(unsigned int num);
 int octal_helper(unsigned int num);
 int lil_hex_helper(unsigned int n);
 int big_hex_helper(unsigned int n);
+int long_hex_helper(long n);
 
 #endif
