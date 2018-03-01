@@ -13,7 +13,20 @@
 <br>
 
 ## Description
-The \_printf function produces output in a specific format, based on the given options, and writes to the standard output.
+The \_printf function produces output in a specific format, based on the given options, and writes to the standard output. To utilize \_printf you must create a main.c file and include the header "holberton.h". Then compile with all the following **.c** files.
+
+Files | Function 1 | Function 2 | Function 3 | Function 4 | Function 5
+---------- | - | - | - | - | - 
+**_printf.c** | _printf
+**_putchar.c** | _putchar
+**get_spec_func.c** | get_spec_func
+**char_helpers.c** | print_char | print_percent
+**number_helpers.c** | print_decimal | print_integer
+**string_helpers.c** | print_string | print_special_string | print_rot13 | print_reverse | print_pointer
+**translation_helpers.c** | print_binary | print_unsigned | print_octal | print_lil_hex | print_big_hex
+**math_helpers.c** | binary_helper | octal_helper | lil_hex_helper | big_hex_helper | long_hex_helper
+holberton.h | _All prototypes_
+man_3_printf | _Man Page_
 
 ### Return value
 Number of characters printed.
