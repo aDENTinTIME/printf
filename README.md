@@ -39,7 +39,7 @@ A character that specifies what type of output to return.
 
 <br>
 
-The following specifiers **must** be preceded by a percent '**%**' sign, otherwise they are treated like normal characters.
+The following specifiers **_must_** be preceded by a percent '**%**' sign, otherwise they are treated like normal characters.
 
 ### c
 The int argument is converted into type char and a single character is written.
