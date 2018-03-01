@@ -30,12 +30,12 @@ The int argument is converted into type char and a single character is written.
 .HP 2
 .BR s
 .br
-The argument is of type char *. The full string is written, up to a terminating null byte '\\0'. 
+The argument is of type char *. The full string is written, up to a terminating null byte '\\0'.
 
 .HP 2
 .BR S
 .br
-The argument is of type char *. The full string is written, up to a terminating null byte '\\0', except for non printable characters, which instead are printed as their ascii value, in hex ie. '\\x0A', instead of '\\n'. 
+The argument is of type char *. The full string is written, up to a terminating null byte '\\0', except for non printable characters, which instead are printed as their ascii value, in hex ie. '\\x0A', instead of '\\n'.
 
 .HP 2
 .BR d ", " i
@@ -55,7 +55,7 @@ The unsigned int argument is converted to binary (base 2) \fBb\fR, octal (base 8
 .HP 2
 .BR r
 .br
-The argument is of type char *. The full string is written in reverse. 
+The argument is of type char *. The full string is written in reverse.
 
 .HP 2
 .BR R
