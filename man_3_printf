@@ -1,4 +1,4 @@
-.TH _PRINTF "1" "\(co February 27, 2018" "v1"
+.TH _PRINTF "3" "\(co February 27, 2018" "v1"
 .SH NAME
 _printf \- formatted output conversion
 .SH SYNOPSIS
@@ -79,7 +79,7 @@ int main(void)
 The preceding function would output "Print this!"
 
 .SH SEE ALSO
-.BR printf \fR(1)\f
+.BR printf \fR(3)\f
 .SH BUGS
 No known bugs.
 .PP
