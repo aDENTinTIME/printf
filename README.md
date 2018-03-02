@@ -13,7 +13,7 @@
 <br>
 
 ## Description
-The \_printf function produces output in a specific format, based on the given options, and writes to the standard output. To utilize \_printf you must create a main.c file and include the header "holberton.h". Then compile with all the following **.c** files.
+The \_printf function produces output in a specific format, based on the given options, and writes to the standard output. To utilize \_printf you must create a main.c file and include the header "holberton.h". Call the function \__printf_, and pass any arguments you like. Then compile with all the following **.c** files. If you'd like to view the beautiful manual page, feel free to run it locally by using the command `man -l man_3_printf`.
 
 Files | Function 1 | Function 2 | Function 3 | Function 4 | Function 5
 ---------- | - | - | - | - | - 
